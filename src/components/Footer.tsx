@@ -84,7 +84,8 @@ const Footer = () => {
                   onClick={() => handlePhoneClick('9624127464', 'call')}
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  +91 96241 27464
+                  +91  73834 46474
+                  +91  98241 55520
                 </button>
               </div>
             </div>
@@ -97,7 +98,7 @@ const Footer = () => {
                   href="mailto:olwin.zula@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  olwin.zula@gmail.com
+                  olwinzulahouse.hyderabad@gmail.com
                 </a>
               </div>
             </div>
@@ -138,7 +139,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Olwin Zula House. All rights reserved.
+            © 2025 Olwin Zula House. All rights reserved.
           </p>
         </div>
       </div>
