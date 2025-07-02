@@ -51,8 +51,8 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <div className="space-y-2 text-sm text-gray-300">
               <div>Custom Zula Swings</div>
-              <div>Zula Beds</div>
-              <div>Zula Daybeds</div>
+              <div>Wooden Zula</div>
+              <div>Acrylic Zula </div>
               <div>Zula Hammocks</div>
               <div>Zula Customization</div>
               <div>Installation</div>
@@ -84,7 +84,7 @@ const Footer = () => {
                   onClick={() => handlePhoneClick('9624127464', 'call')}
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
-                  +91  73834 46474
+                  +91  73834 46474</br>
                   +91  98241 55520
                 </button>
               </div>
