@@ -37,14 +37,14 @@ const About = () => {
                 but also as beautiful additions to any space. Each swing is meticulously crafted using premium materials and traditional techniques.
               </p>
               <Link to="/products">
-                <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
+                <Button className="bg-amber-600 text-white hover:bg-amber-700 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
                   View Our Products
                 </Button>
               </Link>
             </div>
             <div className="flex justify-center">
               <img
-                src="/lovable-uploads/7015a7e0-bafc-484e-8e9e-430e546f8568.png"
+                src="/lovable-uploads/c1717f72-d605-4218-8342-a4804c6dcdc3.png"
                 alt="Premium Wooden Zula Swing"
                 className="w-full max-w-md rounded-lg shadow-lg object-cover"
               />
@@ -140,7 +140,7 @@ const About = () => {
             </div>
             <div className="flex justify-center">
               <img
-                src="/lovable-uploads/c1717f72-d605-4218-8342-a4804c6dcdc3.png"
+                src="/lovable-uploads/745edff1-262d-43f6-a253-4ffaa9ab25a0.png"
                 alt="Premium Zula Swing"
                 className="rounded-lg shadow-lg w-full max-w-md"
               />
@@ -165,7 +165,7 @@ const About = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200" style={{ color: '#EA580C' }}>
+              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200">
                 Get in Touch
               </Button>
             </Link>

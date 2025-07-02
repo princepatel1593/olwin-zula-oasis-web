@@ -61,133 +61,11 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Business Hours */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-amber-900 mb-8">Business Hours</h2>
-            <div className="bg-amber-50 rounded-lg shadow-lg p-8 max-w-md mx-auto">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="font-semibold text-gray-700">Monday - Saturday:</span>
-                  <span className="text-amber-600 font-bold">9:00 AM - 7:00 PM</span>
-                </div>
-                <div className="border-t pt-4 flex justify-between items-center">
-                  <span className="font-semibold text-gray-700">Sunday:</span>
-                  <span className="text-amber-600 font-bold">10:00 AM - 5:00 PM</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-amber-900 mb-4">Why Choose Olwin Zulahouse?</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Experience the difference with our premium quality and exceptional service
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              'Free consultation and design advice',
-              'Custom manufacturing capabilities', 
-              'Premium quality materials',
-              'Professional installation service',
-              '1-year warranty on all products',
-              'Competitive pricing'
-            ].map((feature, index) => (
-              <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <div className="w-6 h-6 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <p className="text-gray-700">{feature}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information & Form */}
+      {/* Contact Form & Information */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold text-amber-900 mb-8">Get In Touch</h2>
-              
-              {/* Location */}
-              <div className="mb-8">
-                <div className="flex items-start space-x-4">
-                  <MapPin size={24} className="text-amber-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Location</h3>
-                    <address className="text-gray-700 leading-relaxed not-italic">
-                      Shrinagar Colony Road,<br />
-                      Jubilee Hills, Hyderabad<br />
-                      Telangana, India
-                    </address>
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="mb-8">
-                <div className="flex items-start space-x-4">
-                  <Phone size={24} className="text-amber-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
-                    <button
-                      onClick={() => handlePhoneClick('+919624127464')}
-                      className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200 font-medium"
-                    >
-                      +91 96241 27464
-                    </button>
-                    <p className="text-gray-600 text-sm mt-1">Available 9 AM - 7 PM</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="mb-8">
-                <div className="flex items-start space-x-4">
-                  <Mail size={24} className="text-amber-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Email</h3>
-                    <a
-                      href="mailto:olwin.zula@gmail.com"
-                      className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200"
-                    >
-                      olwin.zula@gmail.com
-                    </a>
-                    <p className="text-gray-600 text-sm mt-1">We'll respond within 24 hours</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Social Media */}
-              <div>
-                <div className="flex items-start space-x-4">
-                  <Instagram size={24} className="text-amber-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Follow Us</h3>
-                    <a
-                      href="https://www.instagram.com/olwin_zulahouse?igsh=cWR1OXU4eTlydmp1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
-                    >
-                      Follow us on Instagram
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
+            {/* Contact Form - Left Side */}
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <h2 className="text-3xl font-bold text-amber-900 mb-8">Send us a Message</h2>
               
@@ -279,6 +157,92 @@ const Contact = () => {
                   Send Message
                 </Button>
               </form>
+            </div>
+
+            {/* Get In Touch - Right Side */}
+            <div>
+              <h2 className="text-3xl font-bold text-amber-900 mb-8">Get In Touch</h2>
+              
+              {/* Location */}
+              <div className="mb-8">
+                <div className="flex items-start space-x-4">
+                  <MapPin size={24} className="text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Location</h3>
+                    <address className="text-gray-700 leading-relaxed not-italic">
+                      Shrinagar Colony Road,<br />
+                      Jubilee Hills, Hyderabad<br />
+                      Telangana, India
+                    </address>
+                  </div>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="mb-8">
+                <div className="flex items-start space-x-4">
+                  <Phone size={24} className="text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
+                    <button
+                      onClick={() => handlePhoneClick('+919624127464')}
+                      className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200 font-medium"
+                    >
+                      +91 96241 27464
+                    </button>
+                    <p className="text-gray-600 text-sm mt-1">Available 9 AM - 7 PM</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="mb-8">
+                <div className="flex items-start space-x-4">
+                  <Mail size={24} className="text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Email</h3>
+                    <a
+                      href="mailto:olwin.zula@gmail.com"
+                      className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200"
+                    >
+                      olwin.zula@gmail.com
+                    </a>
+                    <p className="text-gray-600 text-sm mt-1">We'll respond within 24 hours</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Business Hours */}
+              <div className="mb-8">
+                <div className="flex items-start space-x-4">
+                  <Clock size={24} className="text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Business Hours</h3>
+                    <div className="text-gray-700 space-y-1">
+                      <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                      <p>Sunday: 10:00 AM - 5:00 PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Social Media */}
+              <div>
+                <div className="flex items-start space-x-4">
+                  <Instagram size={24} className="text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Follow Us</h3>
+                    <a
+                      href="https://www.instagram.com/olwin_zulahouse?igsh=cWR1OXU4eTlydmp1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
+                    >
+                      Follow us on Instagram
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

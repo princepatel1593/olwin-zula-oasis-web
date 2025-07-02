@@ -8,18 +8,7 @@ const Home = () => {
   
   const heroImages = [
     '/lovable-uploads/c193be04-623e-4a3a-9c86-318989da1ee6.png',
-    '/lovable-uploads/5e1c33e2-a9ba-426c-91b2-96f6da933410.png',
-    '/lovable-uploads/0b7dcc70-4020-48ef-b73c-d22d5be7efa5.png',
-    '/lovable-uploads/4d7ac444-84e3-420b-b198-924166203276.png',
-    '/lovable-uploads/c1717f72-d605-4218-8342-a4804c6dcdc3.png',
-    '/lovable-uploads/f2ff2ad8-f6dc-4be1-9f87-7f2bc61c93aa.png',
-    '/lovable-uploads/93138346-b9fb-4d1a-bb07-19addb3d8726.png',
-    '/lovable-uploads/4536c53b-fc36-421c-84b2-90bc99eb6cf4.png',
-    '/lovable-uploads/716bf613-7ba0-4e9c-97d7-3073d9d31ea8.png',
-    '/lovable-uploads/745edff1-262d-43f6-a253-4ffaa9ab25a0.png',
-    '/lovable-uploads/7015a7e0-bafc-484e-8e9e-430e546f8568.png',
-    '/lovable-uploads/1875ab75-dcc1-4fee-82be-1743b994b122.png',
-    '/lovable-uploads/534102ae-b531-4524-bf01-0d6668636531.png'
+    '/lovable-uploads/5e1c33e2-a9ba-426c-91b2-96f6da933410.png'
   ];
 
   useEffect(() => {
@@ -65,7 +54,7 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-                <Button variant="outline" className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200" style={{ color: '#EA580C' }}>
+                <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200">
                   Get Quote
                 </Button>
               </Link>
@@ -89,50 +78,118 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Business Hours Section */}
-      <section className="py-16 bg-amber-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-amber-900 mb-8">
-            Business Hours
-          </h2>
-          <div className="bg-white rounded-lg shadow-lg p-8 max-w-md mx-auto">
-            <div className="space-y-4">
-              <div className="flex justify-between items-center">
-                <span className="font-semibold text-gray-700">Monday - Saturday:</span>
-                <span className="text-amber-600 font-bold">9:00 AM - 7:00 PM</span>
+      {/* About Olwin Zulahouse Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-amber-900 mb-6">
+              About Olwin Zulahouse
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We specialize in creating unique, handcrafted zula furniture that transforms ordinary spaces into extraordinary experiences. Our team combines traditional craftsmanship with modern design to deliver custom zula solutions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {[
+              { 
+                title: 'Premium Zula Quality', 
+                desc: 'Handcrafted zula furniture with finest materials and attention to detail',
+                icon: '⭐'
+              },
+              { 
+                title: 'Custom Zula Design', 
+                desc: 'Tailored zula solutions to match your space and style preferences',
+                icon: '🎨'
+              },
+              { 
+                title: 'Expert Zula Service', 
+                desc: 'Professional zula installation and comprehensive after-sales support',
+                icon: '🔧'
+              }
+            ].map((feature, index) => (
+              <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-amber-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
               </div>
-              <div className="border-t pt-4 flex justify-between items-center">
-                <span className="font-semibold text-gray-700">Sunday:</span>
-                <span className="text-amber-600 font-bold">10:00 AM - 5:00 PM</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Our Zula Services Section */}
+      <section className="py-20 bg-amber-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-amber-900 mb-4">
+              Our Zula Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Complete zula manufacturing and design solutions for your space
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {[
+              { title: 'Custom Zula Swings', desc: 'Handcrafted zula hanging swings for indoor and outdoor spaces' },
+              { title: 'Zula Beds', desc: 'Comfortable and stylish zula beds for ultimate relaxation' },
+              { title: 'Zula Daybeds', desc: 'Premium zula daybeds for elegant outdoor living' },
+              { title: 'Zula Customization', desc: 'Complete zula design consultation and custom implementation' }
+            ].map((service, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200">
+                <h3 className="text-lg font-semibold text-amber-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-sm">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link to="/services" onClick={() => window.scrollTo(0, 0)}>
+              <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200">
+                View All Zula Services
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Reviews Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-amber-900 mb-4">
-              Why Choose Olwin Zula House?
+              Customer Reviews
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We are committed to delivering exceptional quality and service in every swing we create.
+            <p className="text-xl text-gray-600">
+              What our customers say about our zula designs
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: 'Premium Materials', desc: 'High-quality wood and acrylic materials', icon: '🌳' },
-              { title: 'Handcrafted Quality', desc: 'Each swing is carefully handcrafted', icon: '👐' },
-              { title: 'Custom Designs', desc: 'Tailored to your specific needs', icon: '🎨' },
-              { title: 'Expert Service', desc: 'Professional installation and support', icon: '⭐' }
-            ].map((feature, index) => (
-              <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-amber-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.desc}</p>
+              {
+                review: "The zula swing designs are absolutely stunning! Perfect craftsmanship and unique style that transformed our garden space.",
+                name: "Rajesh Kumar",
+                location: "Banjara Hills"
+              },
+              {
+                review: "Exceptional quality zula furniture with attention to detail. Their custom zula bed is exactly what we wanted for our home.",
+                name: "Priya Sharma", 
+                location: "Gachibowli"
+              },
+              {
+                review: "Professional service and beautiful zula designs. The team understands customer needs and delivers beyond expectations.",
+                name: "Arjun Reddy",
+                location: "Kondapur"
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-amber-50 p-6 rounded-lg shadow-lg">
+                <p className="text-gray-700 mb-4 italic">"{testimonial.review}"</p>
+                <div className="border-t pt-4">
+                  <p className="font-semibold text-amber-900">{testimonial.name}</p>
+                  <p className="text-gray-600 text-sm">{testimonial.location}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -143,14 +200,18 @@ const Home = () => {
       <section className="py-20 bg-amber-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Space?
+            Ready to Transform Your Space with Zula?
           </h2>
           <p className="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">
-            Contact us today for a personalized quote and let us help you create the perfect relaxation spot.
+            Contact us today for consultation and personalized quotes
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+            <p className="text-amber-100 text-lg">+91 96241 27464</p>
+            <p className="text-amber-100 text-lg">olwin.zula@gmail.com</p>
+          </div>
           <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
             <Button className="bg-white text-amber-600 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200" style={{ color: '#EA580C' }}>
-              Get Your Quote Now
+              Contact Us Now
             </Button>
           </Link>
         </div>
