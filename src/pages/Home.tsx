@@ -10,13 +10,22 @@ const Home = () => {
     '/lovable-uploads/c193be04-623e-4a3a-9c86-318989da1ee6.png',
     '/lovable-uploads/5e1c33e2-a9ba-426c-91b2-96f6da933410.png',
     '/lovable-uploads/0b7dcc70-4020-48ef-b73c-d22d5be7efa5.png',
-    '/lovable-uploads/4d7ac444-84e3-420b-b198-924166203276.png'
+    '/lovable-uploads/4d7ac444-84e3-420b-b198-924166203276.png',
+    '/lovable-uploads/c1717f72-d605-4218-8342-a4804c6dcdc3.png',
+    '/lovable-uploads/f2ff2ad8-f6dc-4be1-9f87-7f2bc61c93aa.png',
+    '/lovable-uploads/93138346-b9fb-4d1a-bb07-19addb3d8726.png',
+    '/lovable-uploads/4536c53b-fc36-421c-84b2-90bc99eb6cf4.png',
+    '/lovable-uploads/716bf613-7ba0-4e9c-97d7-3073d9d31ea8.png',
+    '/lovable-uploads/745edff1-262d-43f6-a253-4ffaa9ab25a0.png',
+    '/lovable-uploads/7015a7e0-bafc-484e-8e9e-430e546f8568.png',
+    '/lovable-uploads/1875ab75-dcc1-4fee-82be-1743b994b122.png',
+    '/lovable-uploads/534102ae-b531-4524-bf01-0d6668636531.png'
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
@@ -52,10 +61,10 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Circular Image Display */}
+            {/* Image Display */}
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-lg overflow-hidden shadow-2xl border-8 border-white">
                   <img
                     src={heroImages[currentImageIndex]}
                     alt="Olwin Zula House Products"
@@ -64,12 +73,12 @@ const Home = () => {
                 </div>
                 
                 {/* Image Indicators */}
-                <div className="flex justify-center mt-6 space-x-2">
+                <div className="flex justify-center mt-6 space-x-2 flex-wrap">
                   {heroImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
                         index === currentImageIndex 
                           ? 'bg-amber-600 scale-125' 
                           : 'bg-gray-300 hover:bg-gray-400'

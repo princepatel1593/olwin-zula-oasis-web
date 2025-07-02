@@ -12,20 +12,20 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-amber-900 text-white">
+    <footer className="bg-amber-600 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4">Olwin Zula House</h3>
-            <p className="text-amber-200 mb-4">
+            <p className="text-amber-100 mb-4">
               Crafting premium wooden and acrylic zula swings for your comfort and style.
             </p>
             <a
               href="https://www.instagram.com/olwin_zulahouse?igsh=cWR1OXU4eTlydmp1"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-amber-200 hover:text-white transition-colors duration-200"
+              className="inline-flex items-center space-x-2 text-amber-100 hover:text-white transition-colors duration-200"
             >
               <Instagram size={20} />
               <span>Follow us on Instagram</span>
@@ -37,18 +37,18 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
             <div className="space-y-3">
               <div>
-                <p className="text-amber-200 mb-2">Phone Numbers:</p>
+                <p className="text-amber-100 mb-2">Phone Numbers:</p>
                 <div className="space-y-2">
                   <div className="flex space-x-4">
                     <button
                       onClick={() => handlePhoneClick('7383446474', 'call')}
-                      className="text-white hover:text-amber-200 transition-colors duration-200 underline"
+                      className="text-white hover:text-amber-100 transition-colors duration-200 underline"
                     >
                       📞 7383446474
                     </button>
                     <button
                       onClick={() => handlePhoneClick('7383446474', 'whatsapp')}
-                      className="text-green-400 hover:text-green-300 transition-colors duration-200"
+                      className="text-green-200 hover:text-green-100 transition-colors duration-200"
                     >
                       💬 WhatsApp
                     </button>
@@ -56,13 +56,13 @@ const Footer = () => {
                   <div className="flex space-x-4">
                     <button
                       onClick={() => handlePhoneClick('9824155520', 'call')}
-                      className="text-white hover:text-amber-200 transition-colors duration-200 underline"
+                      className="text-white hover:text-amber-100 transition-colors duration-200 underline"
                     >
                       📞 9824155520
                     </button>
                     <button
                       onClick={() => handlePhoneClick('9824155520', 'whatsapp')}
-                      className="text-green-400 hover:text-green-300 transition-colors duration-200"
+                      className="text-green-200 hover:text-green-100 transition-colors duration-200"
                     >
                       💬 WhatsApp
                     </button>
@@ -70,8 +70,8 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <p className="text-amber-200">Email:</p>
-                <a href="mailto:olwinzulahouse.hyderabad@gmail.com" className="text-white hover:text-amber-200 transition-colors duration-200">
+                <p className="text-amber-100">Email:</p>
+                <a href="mailto:olwinzulahouse.hyderabad@gmail.com" className="text-white hover:text-amber-100 transition-colors duration-200">
                   olwinzulahouse.hyderabad@gmail.com
                 </a>
               </div>
@@ -81,7 +81,7 @@ const Footer = () => {
           {/* Location */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Location</h4>
-            <p className="text-amber-200">
+            <p className="text-amber-100">
               1st floor, opp. Green bawarchi hotel,<br />
               Srinagar Colony Main Road,<br />
               Yusufguda, Jubilee Hills,<br />
@@ -90,8 +90,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-amber-800 mt-8 pt-8 text-center">
-          <p className="text-amber-200">
+        <div className="border-t border-amber-500 mt-8 pt-8 text-center">
+          <p className="text-amber-100">
             © 2024 Olwin Zula House. All rights reserved.
           </p>
         </div>
