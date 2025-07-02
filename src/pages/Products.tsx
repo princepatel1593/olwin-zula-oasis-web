@@ -9,82 +9,118 @@ const Products = () => {
       id: 1,
       name: 'Premium Wooden Zula Swing (Single)',
       category: 'Wooden',
-      image: '/lovable-uploads/c1717f72-d605-4218-8342-a4804c6dcdc3.png',
+      image: '/lovable-uploads/c193be04-623e-4a3a-9c86-318989da1ee6.png',
       description: 'Handcrafted wooden swing with premium cushioning and traditional design.',
       features: ['Premium wood construction', 'Weather-resistant finish', 'Comfortable cushioning', 'Traditional design'],
       price: '₹44,000 - ₹50,000'
     },
     {
       id: 2,
+      name: 'Luxury Wooden Double Seater',
+      category: 'Wooden',
+      image: '/lovable-uploads/5e1c33e2-a9ba-426c-91b2-96f6da933410.png',
+      description: 'Spacious double seater wooden swing with premium materials and comfort.',
+      features: ['Double seater design', 'Premium wood materials', 'Enhanced comfort', 'Sturdy construction'],
+      price: '₹89,000 - ₹92,000'
+    },
+    {
+      id: 3,
+      name: 'Traditional Wooden Swing',
+      category: 'Wooden',
+      image: '/lovable-uploads/0b7dcc70-4020-48ef-b73c-d22d5be7efa5.png',
+      description: 'Classic traditional wooden swing with authentic craftsmanship.',
+      features: ['Traditional craftsmanship', 'Authentic design', 'Durable construction', 'Classic appeal'],
+      price: '₹40,000 - ₹45,000'
+    },
+    {
+      id: 4,
+      name: 'Premium Wooden Hanging Swing',
+      category: 'Wooden',
+      image: '/lovable-uploads/4d7ac444-84e3-420b-b198-924166203276.png',
+      description: 'Elegant wooden hanging swing with rope suspension and premium finish.',
+      features: ['Rope suspension system', 'Premium wood finish', 'Indoor/outdoor use', 'Luxury craftsmanship'],
+      price: '₹65,000 - ₹70,000'
+    },
+    {
+      id: 5,
       name: 'Modern Acrylic Zula Chair',
       category: 'Acrylic',
-      image: '/lovable-uploads/f2ff2ad8-f6dc-4be1-9f87-7f2bc61c93aa.png',
+      image: '/lovable-uploads/c1717f72-d605-4218-8342-a4804c6dcdc3.png',
       description: 'Contemporary acrylic swing chair perfect for modern homes and offices.',
       features: ['Modern ergonomic design', 'High-quality acrylic', 'Adjustable comfort', 'Space-saving design'],
       price: '₹25,000 - ₹27,000'
     },
     {
-      id: 3,
-      name: 'Luxury Hanging Zula Swing',
-      category: 'Wooden',
-      image: '/lovable-uploads/93138346-b9fb-4d1a-bb07-19addb3d8726.png',
-      description: 'Elegant hanging swing with rope suspension and plush seating.',
-      features: ['Rope suspension system', 'Plush cushioning', 'Indoor/outdoor use', 'Luxury finish'],
-      price: '₹40,000 - ₹42,000'
-    },
-    {
-      id: 4,
-      name: 'Premium Double Seater Swing',
-      category: 'Wooden',
-      image: '/lovable-uploads/4536c53b-fc36-421c-84b2-90bc99eb6cf4.png',
-      description: 'Spacious double seater swing with premium materials and comfort.',
-      features: ['Double seater design', 'Premium materials', 'Enhanced comfort', 'Sturdy construction'],
-      price: '₹89,000 - ₹92,000'
-    },
-    {
-      id: 5,
-      name: 'Acrylic Designer Swing',
+      id: 6,
+      name: 'Designer Acrylic Swing',
       category: 'Acrylic',
-      image: '/lovable-uploads/716bf613-7ba0-4e9c-97d7-3073d9d31ea8.png',
+      image: '/lovable-uploads/f2ff2ad8-f6dc-4be1-9f87-7f2bc61c93aa.png',
       description: 'Modern acrylic swing with unique design elements and comfort.',
       features: ['Designer acrylic construction', 'Modern aesthetic', 'Single person design', 'Easy maintenance'],
       price: '₹40,000 - ₹44,000'
     },
     {
-      id: 6,
-      name: 'Transparent Acrylic Swing',
-      category: 'Acrylic',
-      image: '/lovable-uploads/745edff1-262d-43f6-a253-4ffaa9ab25a0.png',
-      description: 'Crystal clear acrylic swing with contemporary design.',
-      features: ['Crystal clear acrylic', 'Contemporary design', 'Unique styling', 'Versatile placement'],
-      price: '₹40,000 - ₹44,000'
-    },
-    {
       id: 7,
-      name: 'Luxury Wooden Swing with Cushions',
-      category: 'Wooden',
-      image: '/lovable-uploads/7015a7e0-bafc-484e-8e9e-430e546f8568.png',
-      description: 'Premium wooden swing with luxury cushions and elegant design.',
-      features: ['Luxury wooden frame', 'Premium cushions', 'Elegant design', 'Superior comfort'],
-      price: '₹65,000 - ₹70,000'
+      name: 'Contemporary Acrylic Swing',
+      category: 'Acrylic',
+      image: '/lovable-uploads/93138346-b9fb-4d1a-bb07-19addb3d8726.png',
+      description: 'Elegant acrylic swing with contemporary design and comfort.',
+      features: ['Contemporary design', 'Premium acrylic', 'Enhanced comfort', 'Modern styling'],
+      price: '₹40,000 - ₹42,000'
     },
     {
       id: 8,
-      name: 'Decorative Wooden Swing',
-      category: 'Wooden',
-      image: '/lovable-uploads/1875ab75-dcc1-4fee-82be-1743b994b122.png',
-      description: 'Beautiful decorative wooden swing with intricate patterns.',
-      features: ['Decorative patterns', 'Handcrafted details', 'Premium wood', 'Artistic design'],
-      price: '₹40,000 - ₹45,000'
+      name: 'Luxury Acrylic Designer Swing',
+      category: 'Acrylic',
+      image: '/lovable-uploads/4536c53b-fc36-421c-84b2-90bc99eb6cf4.png',
+      description: 'Premium acrylic swing with luxury design and superior comfort.',
+      features: ['Luxury design', 'Premium materials', 'Superior comfort', 'Modern construction'],
+      price: '₹50,000 - ₹55,000'
     },
     {
       id: 9,
-      name: 'Traditional Wooden Swing',
-      category: 'Wooden',
+      name: 'Clear Acrylic Swing',
+      category: 'Acrylic',
+      image: '/lovable-uploads/716bf613-7ba0-4e9c-97d7-3073d9d31ea8.png',
+      description: 'Crystal clear acrylic swing with minimalist design.',
+      features: ['Crystal clear acrylic', 'Minimalist design', 'Unique styling', 'Versatile placement'],
+      price: '₹35,000 - ₹40,000'
+    },
+    {
+      id: 10,
+      name: 'Transparent Acrylic Swing',
+      category: 'Acrylic',
+      image: '/lovable-uploads/745edff1-262d-43f6-a253-4ffaa9ab25a0.png',
+      description: 'Transparent acrylic swing with contemporary design.',
+      features: ['Transparent acrylic', 'Contemporary design', 'Modern styling', 'Easy maintenance'],
+      price: '₹38,000 - ₹42,000'
+    },
+    {
+      id: 11,
+      name: 'Premium Acrylic Swing',
+      category: 'Acrylic',
+      image: '/lovable-uploads/7015a7e0-bafc-484e-8e9e-430e546f8568.png',
+      description: 'Premium acrylic swing with elegant design and superior finish.',
+      features: ['Premium acrylic construction', 'Elegant design', 'Superior finish', 'Comfortable seating'],
+      price: '₹45,000 - ₹50,000'
+    },
+    {
+      id: 12,
+      name: 'Designer Acrylic Swing Chair',
+      category: 'Acrylic',
+      image: '/lovable-uploads/1875ab75-dcc1-4fee-82be-1743b994b122.png',
+      description: 'Beautiful designer acrylic swing with artistic patterns.',
+      features: ['Designer patterns', 'Artistic details', 'Premium acrylic', 'Modern design'],
+      price: '₹42,000 - ₹47,000'
+    },
+    {
+      id: 13,
+      name: 'Classic Acrylic Swing',
+      category: 'Acrylic',
       image: '/lovable-uploads/534102ae-b531-4524-bf01-0d6668636531.png',
-      description: 'Classic traditional wooden swing with authentic craftsmanship.',
-      features: ['Traditional craftsmanship', 'Authentic design', 'Durable construction', 'Classic appeal'],
-      price: '₹85,000+'
+      description: 'Classic acrylic swing with timeless appeal and modern comfort.',
+      features: ['Timeless design', 'Modern comfort', 'Durable construction', 'Classic appeal'],
+      price: '₹40,000 - ₹45,000'
     }
   ];
 
@@ -140,11 +176,11 @@ const Products = () => {
                 key={product.id}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200"
               >
-                <div className="h-64 overflow-hidden">
+                <div className="h-64 overflow-hidden bg-gray-100">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-200"
                   />
                 </div>
                 <div className="p-6">

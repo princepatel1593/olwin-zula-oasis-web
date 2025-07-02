@@ -44,9 +44,9 @@ const About = () => {
             </div>
             <div className="flex justify-center">
               <img
-                src="/lovable-uploads/367a0ed9-a7d1-49d8-992f-058bd438c74f.png"
-                alt="Olwin Zula House Logo"
-                className="w-80 h-80 object-contain"
+                src="/lovable-uploads/7015a7e0-bafc-484e-8e9e-430e546f8568.png"
+                alt="Premium Wooden Zula Swing"
+                className="w-full max-w-md rounded-lg shadow-lg object-cover"
               />
             </div>
           </div>
@@ -160,12 +160,12 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/products">
-              <Button className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
+              <Button className="bg-white text-amber-600 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200">
                 Browse Products
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-amber-600 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200">
+              <Button variant="outline" className="border-white text-white hover:bg-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200" style={{ color: '#EA580C' }}>
                 Get in Touch
               </Button>
             </Link>

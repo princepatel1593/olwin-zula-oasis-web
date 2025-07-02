@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { Phone, Mail, MapPin, Clock, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -26,7 +27,6 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
     
     toast({
@@ -34,7 +34,6 @@ const Contact = () => {
       description: "Thank you for contacting us. We'll get back to you soon.",
     });
 
-    // Reset form
     setFormData({
       name: '',
       email: '',
@@ -44,12 +43,8 @@ const Contact = () => {
     });
   };
 
-  const handlePhoneClick = (number: string, type: 'call' | 'whatsapp') => {
-    if (type === 'call') {
-      window.open(`tel:${number}`, '_self');
-    } else {
-      window.open(`https://wa.me/91${number}`, '_blank');
-    }
+  const handlePhoneClick = (number: string) => {
+    window.open(`tel:${number}`, '_self');
   };
 
   return (
@@ -87,96 +82,108 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-amber-900 mb-4">Why Choose Olwin Zulahouse?</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Experience the difference with our premium quality and exceptional service
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              'Free consultation and design advice',
+              'Custom manufacturing capabilities', 
+              'Premium quality materials',
+              'Professional installation service',
+              '1-year warranty on all products',
+              'Competitive pricing'
+            ].map((feature, index) => (
+              <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm">
+                <div className="w-6 h-6 bg-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white text-sm">✓</span>
+                </div>
+                <p className="text-gray-700">{feature}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Information & Form */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold text-amber-900 mb-8">Get In Touch</h2>
               
-              {/* Phone Numbers */}
+              {/* Location */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Phone Numbers</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="flex-1">
-                      <p className="text-gray-600">Primary Contact:</p>
-                      <p className="text-lg font-semibold text-amber-900">7383446474</p>
-                    </div>
-                    <div className="flex space-x-2">
-                      <Button
-                        onClick={() => handlePhoneClick('7383446474', 'call')}
-                        className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg"
-                      >
-                        📞 Call
-                      </Button>
-                      <Button
-                        onClick={() => handlePhoneClick('7383446474', 'whatsapp')}
-                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg"
-                      >
-                        💬 WhatsApp
-                      </Button>
-                    </div>
+                <div className="flex items-start space-x-4">
+                  <MapPin size={24} className="text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Location</h3>
+                    <address className="text-gray-700 leading-relaxed not-italic">
+                      Shrinagar Colony Road,<br />
+                      Jubilee Hills, Hyderabad<br />
+                      Telangana, India
+                    </address>
                   </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="flex-1">
-                      <p className="text-gray-600">Secondary Contact:</p>
-                      <p className="text-lg font-semibold text-amber-900">9824155520</p>
-                    </div>
-                    <div className="flex space-x-2">
-                      <Button
-                        onClick={() => handlePhoneClick('9824155520', 'call')}
-                        className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg"
-                      >
-                        📞 Call
-                      </Button>
-                      <Button
-                        onClick={() => handlePhoneClick('9824155520', 'whatsapp')}
-                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg"
-                      >
-                        💬 WhatsApp
-                      </Button>
-                    </div>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="mb-8">
+                <div className="flex items-start space-x-4">
+                  <Phone size={24} className="text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
+                    <button
+                      onClick={() => handlePhoneClick('+919624127464')}
+                      className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200 font-medium"
+                    >
+                      +91 96241 27464
+                    </button>
+                    <p className="text-gray-600 text-sm mt-1">Available 9 AM - 7 PM</p>
                   </div>
                 </div>
               </div>
 
               {/* Email */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Email</h3>
-                <a
-                  href="mailto:olwinzulahouse.hyderabad@gmail.com"
-                  className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200"
-                >
-                  olwinzulahouse.hyderabad@gmail.com
-                </a>
-              </div>
-
-              {/* Address */}
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Visit Our Showroom</h3>
-                <address className="text-gray-700 leading-relaxed not-italic">
-                  1st floor, opp. Green bawarchi hotel,<br />
-                  Srinagar Colony Main Road,<br />
-                  Yusufguda, Jubilee Hills,<br />
-                  Hyderabad
-                </address>
+                <div className="flex items-start space-x-4">
+                  <Mail size={24} className="text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Email</h3>
+                    <a
+                      href="mailto:olwin.zula@gmail.com"
+                      className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200"
+                    >
+                      olwin.zula@gmail.com
+                    </a>
+                    <p className="text-gray-600 text-sm mt-1">We'll respond within 24 hours</p>
+                  </div>
+                </div>
               </div>
 
               {/* Social Media */}
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Follow Us</h3>
-                <a
-                  href="https://www.instagram.com/olwin_zulahouse?igsh=cWR1OXU4eTlydmp1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 text-amber-600 hover:text-amber-700 transition-colors duration-200"
-                >
-                  <span>📷</span>
-                  <span>Follow us on Instagram</span>
-                </a>
+                <div className="flex items-start space-x-4">
+                  <Instagram size={24} className="text-amber-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Follow Us</h3>
+                    <a
+                      href="https://www.instagram.com/olwin_zulahouse?igsh=cWR1OXU4eTlydmp1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
+                    >
+                      Follow us on Instagram
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 

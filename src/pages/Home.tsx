@@ -65,7 +65,7 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-                <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200">
+                <Button variant="outline" className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200" style={{ color: '#EA580C' }}>
                   Get Quote
                 </Button>
               </Link>
@@ -149,7 +149,7 @@ const Home = () => {
             Contact us today for a personalized quote and let us help you create the perfect relaxation spot.
           </p>
           <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-            <Button className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
+            <Button className="bg-white text-amber-600 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200" style={{ color: '#EA580C' }}>
               Get Your Quote Now
             </Button>
           </Link>
