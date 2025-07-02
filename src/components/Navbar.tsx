@@ -23,8 +23,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-amber-800">
-            Olwin Zula House
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/cce0a9a4-8cf6-4fa9-b4dd-fbe623952af5.png" 
+              alt="Olwin Zula House Logo" 
+              className="h-12 w-12"
+            />
+            <span className="text-2xl font-bold text-amber-800">Olwin Zula House</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -33,6 +38,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
+                onClick={() => window.scrollTo(0, 0)}
                 className={`text-gray-700 hover:text-amber-600 transition-colors duration-200 font-medium ${
                   isActive(item.path) ? 'text-amber-600 border-b-2 border-amber-600' : ''
                 }`}
@@ -40,9 +46,11 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full transition-all duration-200 hover:scale-105">
-              Get Quote
-            </Button>
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+              <Button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full transition-all duration-200 hover:scale-105">
+                Get Quote
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -66,14 +74,19 @@ const Navbar = () => {
                 className={`block py-2 text-gray-700 hover:text-amber-600 transition-colors duration-200 ${
                   isActive(item.path) ? 'text-amber-600 font-semibold' : ''
                 }`}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  window.scrollTo(0, 0);
+                }}
               >
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full mt-4 w-full">
-              Get Quote
-            </Button>
+            <Link to="/contact" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>
+              <Button className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full mt-4 w-full">
+                Get Quote
+              </Button>
+            </Link>
           </div>
         )}
       </div>

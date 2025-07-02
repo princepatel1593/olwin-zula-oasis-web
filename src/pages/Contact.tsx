@@ -66,8 +66,29 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Business Hours */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-amber-900 mb-8">Business Hours</h2>
+            <div className="bg-amber-50 rounded-lg shadow-lg p-8 max-w-md mx-auto">
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="font-semibold text-gray-700">Monday - Saturday:</span>
+                  <span className="text-amber-600 font-bold">9:00 AM - 7:00 PM</span>
+                </div>
+                <div className="border-t pt-4 flex justify-between items-center">
+                  <span className="font-semibold text-gray-700">Sunday:</span>
+                  <span className="text-amber-600 font-bold">10:00 AM - 5:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Information & Form */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -251,32 +272,6 @@ const Contact = () => {
                   Send Message
                 </Button>
               </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-amber-900 mb-4">Find Us</h2>
-            <p className="text-xl text-gray-600">Visit our showroom in Jubilee Hills, Hyderabad</p>
-          </div>
-          
-          <div className="bg-white p-4 rounded-lg shadow-lg">
-            <div className="aspect-video">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6558937157665!2d78.41554731437!3d17.4273377040359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaeeeea9%3A0x19e3a36b9b619fb0!2sYusufguda%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Olwin Zula House Location"
-                className="rounded-lg"
-              ></iframe>
             </div>
           </div>
         </div>

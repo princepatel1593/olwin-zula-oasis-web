@@ -25,67 +25,85 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-50 to-orange-100 py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-6xl font-bold text-amber-900 mb-6 leading-tight">
-                Premium
-                <span className="text-orange-600"> Zula </span>
-                Swings
-              </h1>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Handcrafted wooden and acrylic swing seats that combine comfort, style, and durability. 
-                Transform your space with our premium collection.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link to="/products">
-                  <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
-                    View Products
-                  </Button>
-                </Link>
-                <Link to="/contact">
-                  <Button variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200">
-                    Get Quote
-                  </Button>
-                </Link>
-              </div>
+      {/* Full Screen Hero Section */}
+      <section className="relative h-screen overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImages[currentImageIndex]}
+            alt="Olwin Zula House Products"
+            className="w-full h-full object-cover transition-all duration-1000"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        </div>
+        
+        {/* Content Overlay */}
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="text-center text-white px-4 max-w-4xl">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+              Premium
+              <span className="text-orange-400"> Zula </span>
+              Swings
+            </h1>
+            <p className="text-2xl lg:text-3xl mb-4 font-semibold text-orange-300">
+              Transforming Spaces with Unique Zula Design
+            </p>
+            <p className="text-xl lg:text-2xl mb-8 leading-relaxed text-gray-200">
+              Handcrafted wooden and acrylic swing seats that combine comfort, style, and durability.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/products" onClick={() => window.scrollTo(0, 0)}>
+                <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
+                  View Products
+                </Button>
+              </Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-200">
+                  Get Quote
+                </Button>
+              </Link>
             </div>
+          </div>
+        </div>
 
-            {/* Image Display */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-lg overflow-hidden shadow-2xl border-8 border-white">
-                  <img
-                    src={heroImages[currentImageIndex]}
-                    alt="Olwin Zula House Products"
-                    className="w-full h-full object-cover transition-all duration-500"
-                  />
-                </div>
-                
-                {/* Image Indicators */}
-                <div className="flex justify-center mt-6 space-x-2 flex-wrap">
-                  {heroImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                        index === currentImageIndex 
-                          ? 'bg-amber-600 scale-125' 
-                          : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
-                    />
-                  ))}
-                </div>
+        {/* Image Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                index === currentImageIndex 
+                  ? 'bg-orange-400 scale-125' 
+                  : 'bg-white/50 hover:bg-white/80'
+              }`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Business Hours Section */}
+      <section className="py-16 bg-amber-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-amber-900 mb-8">
+            Business Hours
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-8 max-w-md mx-auto">
+            <div className="space-y-4">
+              <div className="flex justify-between items-center">
+                <span className="font-semibold text-gray-700">Monday - Saturday:</span>
+                <span className="text-amber-600 font-bold">9:00 AM - 7:00 PM</span>
+              </div>
+              <div className="border-t pt-4 flex justify-between items-center">
+                <span className="font-semibold text-gray-700">Sunday:</span>
+                <span className="text-amber-600 font-bold">10:00 AM - 5:00 PM</span>
               </div>
             </div>
           </div>
@@ -130,7 +148,7 @@ const Home = () => {
           <p className="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">
             Contact us today for a personalized quote and let us help you create the perfect relaxation spot.
           </p>
-          <Link to="/contact">
+          <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
             <Button className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
               Get Your Quote Now
             </Button>
