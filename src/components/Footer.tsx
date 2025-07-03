@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm text-gray-300">
               <div>Custom Zula Swings</div>
               <div>Wooden Zula</div>
-              <div>Acrylic Zula </div>
+              <div>Acrylic Zula</div>
               <div>Zula Hammocks</div>
               <div>Zula Customization</div>
               <div>Installation</div>
@@ -69,8 +69,10 @@ const Footer = () => {
                 <MapPin size={16} className="text-orange-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Shrinagar Colony Road,<br />
-                    Jubilee Hills, Hyderabad
+                    Olwin zula house<br />
+                    1st floor, opp. Green bawarchi hotel,<br />
+                    srinagar colony main road, yusufguda,<br />
+                    jublee hills, hyderabad
                   </p>
                 </div>
               </div>
@@ -80,13 +82,10 @@ const Footer = () => {
             <div className="mb-4">
               <div className="flex items-center space-x-2">
                 <Phone size={16} className="text-orange-400 flex-shrink-0" />
-                <button
-                  onClick={() => handlePhoneClick('9624127464', 'call')}
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
-                >
-                  +91  73834 46474</br>
-                  +91  98241 55520
-                </button>
+                <div className="text-gray-300 text-sm">
+                  <div>+91 73834 46474</div>
+                  <div>+91 98241 55520</div>
+                </div>
               </div>
             </div>
 
@@ -95,7 +94,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2">
                 <Mail size={16} className="text-orange-400 flex-shrink-0" />
                 <a
-                  href="mailto:olwin.zula@gmail.com"
+                  href="mailto:olwinzulahouse.hyderabad@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors text-sm"
                 >
                   olwinzulahouse.hyderabad@gmail.com
@@ -125,14 +124,14 @@ const Footer = () => {
           <h4 className="text-xl font-semibold mb-4">Find Us</h4>
           <div className="w-full h-80 bg-white rounded-lg shadow-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3234567!2d78.41277777777778!3d17.436944444444444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5b8b8b%3A0x8b8b8b8b8b8b8b8b!2sJubilee%20Hills%2C%20Hyderabad%2C%20Telangana%2C%20India!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3!2d78.4!3d17.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sOpp.+Green+bawarchi+hotel%2C+srinagar+colony+main+road%2C+yusufguda%2C+jublee+hills%2C+hyderabad!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Olwin Zula House Location - Shrinagar Colony Road, Jubilee Hills, Hyderabad"
+              title="Olwin Zula House Location - opp. Green bawarchi hotel, srinagar colony main road, yusufguda, jublee hills, hyderabad"
             ></iframe>
           </div>
         </div>

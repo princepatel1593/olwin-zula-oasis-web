@@ -47,6 +47,10 @@ const Contact = () => {
     window.open(`tel:${number}`, '_self');
   };
 
+  const handleWhatsAppClick = () => {
+    window.open(`https://wa.me/917383446474`, '_blank');
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -61,8 +65,36 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Join Our Happy Customers Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6" style={{ color: '#EA580C' }}>
+            Join Our Happy Customers
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: '#EA580C' }}>
+            Experience the same quality and service that has made our customers so satisfied. Contact us today to start your journey.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+            <button
+              onClick={() => handlePhoneClick('7383446474')}
+              className="text-lg font-semibold transition-colors duration-200 hover:underline"
+              style={{ color: '#EA580C' }}
+            >
+              Call Now: 7383446474
+            </button>
+            <button
+              onClick={handleWhatsAppClick}
+              className="text-lg font-semibold transition-colors duration-200 hover:underline"
+              style={{ color: '#EA580C' }}
+            >
+              WhatsApp Us
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form & Information */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" id="get-in-touch">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form - Left Side */}
@@ -170,8 +202,10 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Location</h3>
                     <address className="text-gray-700 leading-relaxed not-italic">
-                      Shrinagar Colony Road,<br />
-                      Jubilee Hills, Hyderabad<br />
+                      Olwin zula house<br />
+                      1st floor, opp. Green bawarchi hotel,<br />
+                      srinagar colony main road, yusufguda,<br />
+                      jublee hills, hyderabad<br />
                       Telangana, India
                     </address>
                   </div>
@@ -184,12 +218,20 @@ const Contact = () => {
                   <Phone size={24} className="text-amber-600 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
-                    <button
-                      onClick={() => handlePhoneClick('+919624127464')}
-                      className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200 font-medium"
-                    >
-                      +91 96241 27464
-                    </button>
+                    <div className="space-y-1">
+                      <button
+                        onClick={() => handlePhoneClick('+917383446474')}
+                        className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200 font-medium block"
+                      >
+                        +91 73834 46474
+                      </button>
+                      <button
+                        onClick={() => handlePhoneClick('+919824155520')}
+                        className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200 font-medium block"
+                      >
+                        +91 98241 55520
+                      </button>
+                    </div>
                     <p className="text-gray-600 text-sm mt-1">Available 9 AM - 7 PM</p>
                   </div>
                 </div>
@@ -202,10 +244,10 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Email</h3>
                     <a
-                      href="mailto:olwin.zula@gmail.com"
+                      href="mailto:olwinzulahouse.hyderabad@gmail.com"
                       className="text-amber-600 hover:text-amber-700 text-lg transition-colors duration-200"
                     >
-                      olwin.zula@gmail.com
+                      olwinzulahouse.hyderabad@gmail.com
                     </a>
                     <p className="text-gray-600 text-sm mt-1">We'll respond within 24 hours</p>
                   </div>

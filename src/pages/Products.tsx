@@ -208,7 +208,14 @@ const Products = () => {
                     <p className="text-2xl font-bold text-amber-600">{product.price}</p>
                   </div>
 
-                  <Link to="/contact">
+                  <Link to="/contact#get-in-touch" onClick={() => {
+                    setTimeout(() => {
+                      const element = document.getElementById('get-in-touch');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 100);
+                  }}>
                     <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-lg transition-colors duration-200">
                       Get Quote
                     </Button>
@@ -229,7 +236,7 @@ const Products = () => {
           <p className="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">
             Don't see exactly what you're looking for? We specialize in custom designs tailored to your specific requirements.
           </p>
-          <Link to="/contact">
+          <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
             <Button className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
               Discuss Custom Design
             </Button>

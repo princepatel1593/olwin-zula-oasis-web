@@ -82,10 +82,10 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-amber-900 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6" style={{ color: '#EA580C' }}>
               About Olwin Zulahouse
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl max-w-4xl mx-auto leading-relaxed" style={{ color: '#EA580C' }}>
               We specialize in creating unique, handcrafted zula furniture that transforms ordinary spaces into extraordinary experiences. Our team combines traditional craftsmanship with modern design to deliver custom zula solutions.
             </p>
           </div>
@@ -110,8 +110,8 @@ const Home = () => {
             ].map((feature, index) => (
               <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-amber-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-xl font-semibold mb-3" style={{ color: '#EA580C' }}>{feature.title}</h3>
+                <p className="leading-relaxed" style={{ color: '#EA580C' }}>{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -196,21 +196,21 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-amber-600">
+      {/* Get in Touch Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Space with Zula?
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6" style={{ color: '#EA580C' }}>
+            Join Our Happy Customers
           </h2>
-          <p className="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">
-            Contact us today for consultation and personalized quotes
+          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: '#EA580C' }}>
+            Experience the same quality and service that has made our customers so satisfied. Contact us today to start your journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <p className="text-amber-100 text-lg">+91 96241 27464</p>
-            <p className="text-amber-100 text-lg">olwin.zula@gmail.com</p>
+            <p className="text-lg font-semibold" style={{ color: '#EA580C' }}>Call Now: 7383446474</p>
+            <p className="text-lg font-semibold" style={{ color: '#EA580C' }}>WhatsApp Us</p>
           </div>
           <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-            <Button className="bg-white text-amber-600 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200" style={{ color: '#EA580C' }}>
+            <Button className="bg-white border-2 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200" style={{ color: '#EA580C', borderColor: '#EA580C' }}>
               Contact Us Now
             </Button>
           </Link>
