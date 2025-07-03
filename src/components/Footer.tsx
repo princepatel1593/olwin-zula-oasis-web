@@ -124,14 +124,14 @@ const Footer = () => {
           <h4 className="text-xl font-semibold mb-4">Find Us</h4>
           <div className="w-full h-80 bg-white rounded-lg shadow-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3!2d78.4!3d17.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sOpp.+Green+bawarchi+hotel%2C+srinagar+colony+main+road%2C+yusufguda%2C+jublee+hills%2C+hyderabad!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.569726264445!2d78.44667747516588!3d17.43520399859275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91411e3686d1%3A0x2b5cdf5b94e64e2f!2sYusufguda%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Olwin Zula House Location - opp. Green bawarchi hotel, srinagar colony main road, yusufguda, jublee hills, hyderabad"
+              title="Olwin Zula House Location - 1st floor, opp. Green bawarchi hotel, srinagar colony main road, yusufguda, jublee hills, hyderabad"
             ></iframe>
           </div>
         </div>

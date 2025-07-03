@@ -170,31 +170,31 @@ const Products = () => {
           </div>
 
           {/* Products Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 transform flex flex-col"
               >
-                <div className="h-64 overflow-hidden bg-gray-100">
+                <div className="h-56 sm:h-64 overflow-hidden bg-gray-100 flex-shrink-0">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-200"
+                    className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-4 sm:p-6 flex flex-col flex-grow">
                   <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-semibold text-amber-900">{product.name}</h3>
-                    <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <h3 className="text-lg sm:text-xl font-semibold text-amber-900 line-clamp-2">{product.name}</h3>
+                    <span className="bg-amber-100 text-amber-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex-shrink-0 ml-2">
                       {product.category}
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-4">{product.description}</p>
+                  <p className="text-gray-600 mb-4 text-sm sm:text-base flex-grow">{product.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="font-semibold text-gray-800 mb-2">Features:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
+                    <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">Features:</h4>
+                    <ul className="text-xs sm:text-sm text-gray-600 space-y-1">
                       {product.features.map((feature, index) => (
                         <li key={index} className="flex items-center">
                           <span className="text-amber-600 mr-2">•</span>
@@ -205,21 +205,23 @@ const Products = () => {
                   </div>
 
                   <div className="mb-4">
-                    <p className="text-2xl font-bold text-amber-600">{product.price}</p>
+                    <p className="text-xl sm:text-2xl font-bold text-amber-600">{product.price}</p>
                   </div>
 
-                  <Link to="/contact#get-in-touch" onClick={() => {
-                    setTimeout(() => {
-                      const element = document.getElementById('get-in-touch');
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }, 100);
-                  }}>
-                    <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-lg transition-colors duration-200">
-                      Get Quote
-                    </Button>
-                  </Link>
+                  <div className="mt-auto">
+                    <Link to="/contact#get-in-touch" onClick={() => {
+                      setTimeout(() => {
+                        const element = document.getElementById('get-in-touch');
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }, 100);
+                    }}>
+                      <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 sm:py-3 rounded-lg transition-all duration-300 hover:scale-105 text-sm sm:text-base">
+                        Get Quote
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
@@ -236,7 +238,7 @@ const Products = () => {
           <p className="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">
             Don't see exactly what you're looking for? We specialize in custom designs tailored to your specific requirements.
           </p>
-          <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+          <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <Button className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
               Discuss Custom Design
             </Button>

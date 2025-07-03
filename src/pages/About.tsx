@@ -36,7 +36,7 @@ const About = () => {
                 Our passion for quality craftsmanship and innovative design drives us to create pieces that not only serve as functional furniture 
                 but also as beautiful additions to any space. Each swing is meticulously crafted using premium materials and traditional techniques.
               </p>
-              <Link to="/products">
+              <Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <Button className="bg-amber-600 text-white hover:bg-amber-700 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
                   View Our Products
                 </Button>
@@ -159,13 +159,13 @@ const About = () => {
             Browse our complete collection of premium zula swings and find the perfect piece for your space.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/products">
+            <Link to="/products" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Button className="bg-white text-amber-600 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200">
                 Browse Products
               </Button>
             </Link>
-            <Link to="/contact">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200">
+            <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <Button className="text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200" style={{ backgroundColor: '#EA580C' }}>
                 Get in Touch
               </Button>
             </Link>
