@@ -124,7 +124,7 @@ const Footer = () => {
           <h4 className="text-lg md:text-xl font-semibold mb-4 text-center md:text-left">Find Us</h4>
           <div className="w-full h-60 md:h-80 bg-white rounded-lg shadow-lg overflow-hidden">
             <iframe
-              src="https://maps.app.goo.gl/nzCqDjpECZXRsZSDA"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2616825!2d78.39616931491536!3d17.442508587965757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9158edcaaaaa%3A0xaaaa!2sOlwin%20zula%20house%2C%201st%20floor%2C%20opp.%20Green%20bawarchi%20hotel%2C%20srinagar%20colony%20main%20road%2C%20yusufguda%2C%20jublee%20hills%2C%20hyderabad!5e0!3m2!1sen!2sin!4v1608000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

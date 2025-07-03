@@ -1,9 +1,18 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  const handleStartProject = () => {
+    navigate('/contact');
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   const services = [
     {
       title: 'Custom Design & Manufacturing',
@@ -127,11 +136,12 @@ const Services = () => {
           <p className="text-lg md:text-xl text-amber-100 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
             Contact us today to discuss your project and let us help you create the perfect zula swing for your space.
           </p>
-          <Link to="/contact">
-            <Button className="bg-white text-amber-600 hover:bg-gray-100 px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg font-semibold transition-all duration-200 hover:scale-105">
-              Start Your Project
-            </Button>
-          </Link>
+          <Button 
+            onClick={handleStartProject}
+            className="bg-white text-amber-600 hover:bg-gray-100 px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg font-semibold transition-all duration-200 hover:scale-105"
+          >
+            Start Your Project
+          </Button>
         </div>
       </section>
     </div>
