@@ -46,13 +46,13 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-50 to-orange-100 py-20">
+      <section className="relative bg-gradient-to-br from-amber-50 to-orange-100 py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl lg:text-6xl font-bold text-amber-900 mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-amber-900 mb-4 md:mb-6">
               Our Services
             </h1>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed px-4">
               From design to installation and beyond, we provide comprehensive services 
               to ensure your complete satisfaction with your zula swing purchase.
             </p>
@@ -61,23 +61,23 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow duration-200"
+                className="bg-gray-50 p-6 md:p-8 rounded-lg hover:shadow-lg transition-shadow duration-200"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-amber-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                <div className="text-3xl md:text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-lg md:text-xl font-semibold text-amber-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">{service.description}</p>
                 
                 <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-sm text-gray-700">
+                    <div key={featureIndex} className="flex items-center text-xs md:text-sm text-gray-700">
                       <span className="text-amber-600 mr-2">✓</span>
-                      {feature}
+                      <span className="flex-1">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -88,18 +88,18 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-amber-900 mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-4">
               Our Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Simple, transparent, and customer-focused approach to delivering your perfect zula swing.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { step: '01', title: 'Consultation', desc: 'Discuss your requirements and preferences' },
               { step: '02', title: 'Design', desc: 'Create custom design and get your approval' },
@@ -107,11 +107,11 @@ const Services = () => {
               { step: '04', title: 'Installation', desc: 'Professional installation and final setup' }
             ].map((process, index) => (
               <div key={index} className="text-center">
-                <div className="bg-amber-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="bg-amber-600 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg md:text-xl font-bold mx-auto mb-4">
                   {process.step}
                 </div>
-                <h3 className="text-xl font-semibold text-amber-900 mb-2">{process.title}</h3>
-                <p className="text-gray-600">{process.desc}</p>
+                <h3 className="text-lg md:text-xl font-semibold text-amber-900 mb-2">{process.title}</h3>
+                <p className="text-gray-600 text-sm md:text-base px-2">{process.desc}</p>
               </div>
             ))}
           </div>
@@ -119,16 +119,16 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-amber-600">
+      <section className="py-12 md:py-20 bg-amber-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-amber-100 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
             Contact us today to discuss your project and let us help you create the perfect zula swing for your space.
           </p>
           <Link to="/contact">
-            <Button className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-200 hover:scale-105">
+            <Button className="bg-white text-amber-600 hover:bg-gray-100 px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg font-semibold transition-all duration-200 hover:scale-105">
               Start Your Project
             </Button>
           </Link>
