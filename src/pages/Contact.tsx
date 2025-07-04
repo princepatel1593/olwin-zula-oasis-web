@@ -30,8 +30,8 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Google Apps Script Web App URL (user needs to create this)
-      const scriptUrl = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+      // Your Google Apps Script Web App URL
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbysaPiUy3kKNUpqcnlOu93Ci428q40fVrjNzr8xHYGJbGiCZNL5hO8mq9tP1yzDfJdfDQ/exec';
       
       const response = await fetch(scriptUrl, {
         method: 'POST',
