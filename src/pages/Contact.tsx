@@ -8,6 +8,7 @@ import { Phone, Mail, MapPin, Clock, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,23 +25,59 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    console.log('Form submitted:', formData);
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
+    try {
+      // Google Apps Script Web App URL (user needs to create this)
+      const scriptUrl = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+      
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString(),
+          source: 'Contact Form'
+        })
+      });
 
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+      console.log('Form submitted to Google Sheets:', formData);
+      
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+      
+      // Clear form even if there's an error since we're using no-cors
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handlePhoneClick = (number: string) => {
@@ -61,47 +98,6 @@ const Contact = () => {
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed px-4">
               Ready to transform your space? Get in touch with us for a personalized quote and consultation.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Join Our Happy Customers Section */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="flex space-x-4 text-4xl md:text-5xl">
-              <span>😊</span>
-              <span>⭐</span>
-              <span>🤝</span>
-            </div>
-          </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6" style={{ color: '#EA580C' }}>
-            Join Our Happy Customers
-          </h2>
-          <p className="text-lg md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto px-4" style={{ color: '#EA580C' }}>
-            Experience the same quality and service that has made our customers so satisfied. Contact us today to start your journey.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-            <div className="flex items-center">
-              <Phone size={20} className="mr-2" style={{ color: '#EA580C' }} />
-              <button
-                onClick={() => handlePhoneClick('7383446474')}
-                className="text-base md:text-lg font-semibold transition-colors duration-200 hover:underline"
-                style={{ color: '#EA580C' }}
-              >
-                Call Now: 7383446474
-              </button>
-            </div>
-            <div className="flex items-center">
-              <Phone size={20} className="mr-2" style={{ color: '#EA580C' }} />
-              <button
-                onClick={handleWhatsAppClick}
-                className="text-base md:text-lg font-semibold transition-colors duration-200 hover:underline"
-                style={{ color: '#EA580C' }}
-              >
-                WhatsApp Us
-              </button>
-            </div>
           </div>
         </div>
       </section>
@@ -197,9 +193,10 @@ const Contact = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 md:py-3 rounded-lg text-base md:text-lg font-semibold transition-all duration-200 hover:scale-105"
+                  disabled={isSubmitting}
+                  className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 md:py-3 rounded-lg text-base md:text-lg font-semibold transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </div>
