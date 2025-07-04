@@ -31,7 +31,7 @@ const Contact = () => {
     
     try {
       // Your Google Apps Script Web App URL
-      const scriptUrl = 'https://script.google.com/macros/s/AKfycbykwmYKCFshbaLBXQI1hDFJ1jJmlIdfVwgYxuQwSlPgbKtq1kFAhAw7tAXaxwZWf56Hdg/exec';
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbzfZS4K8OdLvmmjjR2kVzSoAk8RpbYdwQb_QD_203Wjt5ZBG0hAVh_yCAK4rn5ohUeylQ/exec';
       
       const response = await fetch(scriptUrl, {
         method: 'POST',
